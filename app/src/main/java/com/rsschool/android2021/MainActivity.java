@@ -16,7 +16,8 @@ public class MainActivity extends AppCompatActivity implements StartSecondFragme
         openFirstFragment(0);
     }
 
-    private void openFirstFragment(int previousNumber) {
+    @Override
+    public void openFirstFragment(int previousNumber) {
         final Fragment firstFragment = FirstFragment.newInstance(previousNumber);
         final FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         transaction.replace(R.id.container, firstFragment);
